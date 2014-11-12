@@ -1,0 +1,146 @@
+#home {
+	.content-wrapper {
+		margin-top: 10px;
+		margin-bottom: 60px;
+		.image-thumbnail {
+			.center-block {
+				width: 300px;
+			}
+			.col-xs-12 {
+				padding: 0;
+			}
+			img {
+				.size (100px;100px);
+				float: left;
+			}
+		}
+	}
+
+	#footer {
+		height: 50px;
+		background-color: rgba(47, 52,59,.9);
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		padding: 8px 10px;
+
+		img {
+			.size(100px;34px);
+		}
+		a {
+			float: left;
+			
+		}
+		.footer-text {
+			color: @contessa;
+			font-size: 8pt;
+			text-align: center;
+
+		}
+		.contact {
+			float: right;
+			line-height:29px;
+		    text-align:center;
+		    vertical-align:middle;
+		    display:inline-block;
+			.icon {
+				color: @contessa;
+				border-radius: 50%;
+				width: 29px;
+				height: 29px;
+				border: 1px solid @contessa;
+				margin-right: 10px;
+				margin-top: 3px;
+				line-height: inherit;
+				font-size: 20px;
+			}
+
+			.fa-envelope-o {
+				font-size: 18px;
+			}
+
+			.fa-info {
+				margin-left: 10px;
+				margin-right: 0px;
+			}
+			.vert-line {
+				height: 35px;
+				border-left: 1px solid @contessa;
+			}
+		}
+	}
+	
+/*	.modal-dialog {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%,-50%);
+		-ms-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+		margin: 0;
+		.modal-content {
+			 background-color: inherit; 
+			 border: none; 
+			 border-radius: 0px; 
+			 -webkit-box-shadow: none; 
+			 box-shadow: none; 
+			 background-clip: padding-box; 
+			 outline: none; 
+			 .modal-header {
+			 	border-bottom: none;
+			}
+		}
+	}*/
+								
+
+
+	
+	@media (min-width: @min-small) {
+		.content-wrapper {
+			margin-top: 70px;	
+			.image-thumbnail {
+				.center-block {
+					width: 880px;
+				}
+				img {
+					.size (110px;110px);
+				}
+			}
+		}
+		#footer {
+			height: 150px;
+			padding: 15px 40px;
+			img {
+				.size(250px;85px);
+			}
+			.contact {
+				line-height:40px;
+				.icon {
+					width: 40px;
+					height: 40px;
+					margin-right: 20px;
+					font-size: 30px;
+				}
+				.fa-envelope-o {
+				font-size: 23px;
+				}
+				.fa-info {
+					margin-left: 20px;
+					margin-right: 0px;
+				}
+				.vert-line {
+					height: 100px;			}
+			}
+		}
+
+	}
+	@media (min-width: 1025px) {
+		#footer {
+			img {
+				.size(330px;117px);
+			}
+		}
+
+	}
+
+}
