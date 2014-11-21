@@ -37,9 +37,9 @@ if (document.documentElement.clientWidth >768){
     setInterval(function() {
         shuffle();
         for (var i = 0; i <= photoIndex; i++) {
-            $(arrayme[i]).fadeOut(2000).attr( "src", photoSrc[i]).fadeIn("1000");
+            //$(arrayme[i]).fadeOut(2000).attr( "src", photoSrc[i]).fadeIn("1000");
 
-            //$(arrayme[i]).attr("src", photoSrc[i]);
+            $(arrayme[i]).attr("src", photoSrc[i]);
             $(arrayme[i]).attr("id", photoId[i]);
 
 
