@@ -1,0 +1,112 @@
+#album {
+	display: block;
+	width: 100%;
+	background-color: @hampton;
+	.content-wrapper {
+		margin-top: 10px;
+		margin-bottom: 60px;
+		.container {
+			padding-left: 10px;
+			padding-right: 10px;
+		
+			.center-block {
+
+			}
+			.image-thumbnail {
+				padding: 0;
+			  max-width: 880px;
+			  margin: 0 auto;
+			  text-align: center;
+				li {
+					list-style: none;
+					text-align: center;
+					display: inline-block;
+					margin-right: -4px; /*to remove space between inline blocks*/
+					img {
+						.size (100px;100px);				
+					}
+				}
+				.hidePhoto {
+					display: none;
+				}
+			}
+		}
+	}
+
+
+				.slider-wrapper {
+		    	display: block;
+//		    	overflow: hidden;
+		    	.size(300px;234px);
+		    	}
+		    	#slider1_container {
+		    		position: relative;
+		    		overflow: hidden;
+		    		.size(300px;234px);
+		    		.slider-content {
+					  overflow: hidden;
+			    		.size(300px;234px);
+			    		background-color: @black;
+			    	}		 		
+				}
+			.jssora21l, .jssora21r, .jssora21ldn, .jssora21rdn {
+	        	position: absolute;
+	        	cursor: pointer;
+	        	display: block;
+	            background: url(../image/home/a21.png) center center no-repeat;
+	            overflow: hidden;
+	            width: 55px;
+	            height: 55px; 
+	        }
+	        .jssora21l { 
+	            background-position: -3px -33px;	            
+	        }
+
+	        .jssora21r { 
+	          background-position: -63px -33px;
+			}
+	        .jssora21l:hover { background-position: -123px -33px; }
+	        .jssora21r:hover { background-position: -183px -33px; }
+	        .jssora21ldn { background-position: -243px -33px; }
+	        .jssora21rdn { background-position: -303px -33px; }
+	
+	 
+								
+
+
+	
+	@media (min-width: @min-small) {
+		.content-wrapper {
+			margin-top: 70px;
+			margin-bottom: 160px;
+			.container {
+				padding-left: 15px;
+				padding-right: 15px;	
+				.image-thumbnail {
+					li {
+						img {
+							.size (110px;110px);				
+						}
+					}
+					.hidePhoto {
+						display: inline-block;
+					}
+
+				}
+			}
+		}
+		.slider-wrapper {
+	    	.size(550px;429px);
+    	}
+    	#slider1_container {
+    		.size(550px;429px);
+    		.slider-content {
+	    		.size(550px;429px);
+	    	}		 		
+		}
+
+
+
+	}
+
+}
