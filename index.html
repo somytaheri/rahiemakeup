@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
 <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
@@ -21,38 +21,6 @@
     <!-- build:js scripts/vendor/modernizr.js -->
       <script src="public/js/vendor/modernizr.js"></script>
       <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARJlyuGlqgbTHW3Dh2aWDLdK-GqljaQ3c"></script>
-      <script type="text/javascript">
-        "use strict";
-          function initialize() {
-            var myLatlng = new google.maps.LatLng(-37.8862,145.2824);
-            var mapOptions = {
-              center: myLatlng,
-              zoom: 12,
-              disableDefaultUI:true
-            };
-            var map = new google.maps.Map(document.getElementById('map-canvas'),
-                mapOptions);
-             var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                animation: google.maps.Animation.DROP
-            });
-             google.maps.event.trigger(map, 'resize');
-             google.maps.event.addListener(marker, 'click', toggleBounce);
-
-
-          }
-          function toggleBounce() {
-
-            if (marker.getAnimation() != null) {
-              marker.setAnimation(null);
-            } else {
-              marker.setAnimation(google.maps.Animation.BOUNCE);
-            }
-          }
-          google.maps.event.addDomListener(window, 'load', initialize);
-
-    </script>
     <!-- endbuild -->
 </head>
 <body id="home">
@@ -60,107 +28,191 @@
     <div class="content-wrapper">
       <div class="container">
         <ul class="image-thumbnail center-block">
-          <li><img src="public/image/home/small/f00.jpg" alt=""></li>
-          <li><img src="public/image/home/small/00.jpg" alt="" data-toggle="modal" id="0" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f01.jpg" alt=""></li>
-          <li><img src="public/image/home/small/f02.jpg" alt=""></li>
-          <li><img src="public/image/home/small/01.jpg" alt="" data-toggle="modal" id="1" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f03.jpg" alt=""></li>
-          <li><img src="public/image/home/small/02.jpg" alt="" data-toggle="modal" id="2" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/00.jpg" alt="" data-toggle="modal" id="0" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f03.jpg" alt=""></li>
-          <li><img src="public/image/home/small/03.jpg" alt="" data-toggle="modal" id="3" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f04.jpg" alt=""></li>
-          <li><img src="public/image/home/small/04.jpg" alt="" data-toggle="modal" id="4" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/05.jpg" alt="" data-toggle="modal" id="5" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f00.jpg" alt=""></li>
-          <li><img src="public/image/home/small/f05.jpg" alt=""></li>
-          <li><img src="public/image/home/small/03.jpg" alt="" data-toggle="modal" id="3" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f06.jpg" alt=""></li>
-          <li><img src="public/image/home/small/f07.jpg" alt=""></li>
-          <li><img src="public/image/home/small/06.jpg" alt="" data-toggle="modal" id="6" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f08.jpg" alt=""></li>
-          <li><img src="public/image/home/small/f09.jpg" alt=""></li>
-          <li><img src="public/image/home/small/f10.jpg" alt=""></li>
-          <li><img src="public/image/home/small/07.jpg" alt="" data-toggle="modal" id="7" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f15.jpg" alt=""></li>
-          <li><img src="public/image/home/small/08.jpg" alt="" data-toggle="modal" id="8" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f10.jpg" alt=""></li>
-          <li><img src="public/image/home/small/09.jpg" alt="" data-toggle="modal" id="9" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/10.jpg" alt="" data-toggle="modal" id="10" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f11.jpg" alt=""></li>
-          <li><img src="public/image/home/small/08.jpg" alt="" data-toggle="modal" id="8" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f12.jpg" alt=""></li>
-          <li><img src="public/image/home/small/f06.jpg" alt=""></li>
-          <li><img src="public/image/home/small/f13.jpg" alt=""></li>
-          <li><img src="public/image/home/small/11.jpg" alt="" data-toggle="modal" id="11" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f14.jpg" alt=""></li>
-          <li><img src="public/image/home/small/12.jpg" alt="" data-toggle="modal" id="12" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/13.jpg" alt="" data-toggle="modal" id="13" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f20.jpg" alt=""></li>
-          <li><img src="public/image/home/small/14.jpg" alt="" data-toggle="modal" id="14" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/11.jpg" alt="" data-toggle="modal" id="11" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/15.jpg" alt="" data-toggle="modal" id="15" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f15.jpg" alt=""></li>
-          <li><img src="public/image/home/small/16.jpg" alt="" data-toggle="modal" id="16" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f16.jpg" alt=""></li>
-          <li><img src="public/image/home/small/f17.jpg" alt=""></li>
-          <li><img src="public/image/home/small/15.jpg" alt="" data-toggle="modal" id="15" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f18.jpg" alt=""></li>
-          <li><img src="public/image/home/small/f07.jpg" alt=""></li>
-          <li><img src="public/image/home/small/17.jpg" alt="" data-toggle="modal" id="17" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/18.jpg" alt="" data-toggle="modal" id="18" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f19.jpg" alt=""></li>
-          <li><img src="public/image/home/small/19.jpg" alt="" data-toggle="modal" id="19" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f13.jpg" alt=""></li>
-          <li><img src="public/image/home/small/17.jpg" alt="" data-toggle="modal" id="17" class="imgModal" data-target="#myModal"></li>
-          <li><img src="public/image/home/small/f21.jpg" alt=""></li>
-          <li><img src="public/image/home/small/18.jpg" alt="" data-toggle="modal" id="18" class="imgModal" data-target="#myModal"></li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f00.jpg" alt="">
+          </li>
+          <li>
+            <img src="public/image/home/small/00.jpg" alt="" data-toggle="modal" id="0" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f01.jpg" alt=""></li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f02.jpg" alt="">
+          </li>
+          <li>
+            <img src="public/image/home/small/01.jpg" alt="" data-toggle="modal" id="1" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f20.jpg" alt="">
+          </li>
+          <li>
+            <img src="public/image/home/small/02.jpg" alt="" data-toggle="modal" id="2" class="imgModal" data-target="#imgModal">
+          </li>
+          <li>
+            <img src="public/image/home/small/03.jpg" alt="" data-toggle="modal" id="3" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f03.jpg" alt="">
+          </li>
+          <li>
+            <img src="public/image/home/small/04.jpg" alt="" data-toggle="modal" id="4" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f04.jpg" alt="">
+          </li>
+          <li>
+            <img src="public/image/home/small/05.jpg" alt="" data-toggle="modal" id="5" class="imgModal" data-target="#imgModal">
+          </li>
+          <li>
+            <img src="public/image/home/small/06.jpg" alt="" data-toggle="modal" id="6" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f00.jpg" alt="">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f05.jpg" alt="">
+          </li>
+          <li>
+            <img src="public/image/home/small/07.jpg" alt="" data-toggle="modal" id="7" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f06.jpg" alt="">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f07.jpg" alt="">
+          </li>
+          <li><img src="public/image/home/small/08.jpg" alt="" data-toggle="modal" id="8" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f08.jpg" alt="">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f09.jpg" alt="">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f10.jpg" alt="">
+          </li>
+          <li>
+            <img src="public/image/home/small/09.jpg" alt="" data-toggle="modal" id="9" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f15.jpg" alt="">
+          </li>
+          <li>
+            <img src="public/image/home/small/10.jpg" alt="" data-toggle="modal" id="10" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f10.jpg" alt="">
+          </li>
+          <li>
+            <img src="public/image/home/small/11.jpg" alt="" data-toggle="modal" id="11" class="imgModal" data-target="#imgModal">
+          </li>
+          <li>
+            <img src="public/image/home/small/12.jpg" alt="" data-toggle="modal" id="12" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f11.jpg" alt="">
+          </li>
+          <li>
+            <img src="public/image/home/small/13.jpg" alt="" data-toggle="modal" id="13" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f12.jpg" alt="">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f06.jpg" alt="">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f13.jpg" alt="">
+          </li>
+          <li>
+            <img src="public/image/home/small/14.jpg" alt="" data-toggle="modal" id="14" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f14.jpg" alt="">
+          </li>
+          <li>
+            <img src="public/image/home/small/15.jpg" alt="" data-toggle="modal" id="15" class="imgModal" data-target="#imgModal">
+          </li>
+          <li>
+            <img src="public/image/home/small/16.jpg" alt="" data-toggle="modal" id="16" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f20.jpg" alt="">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f21.jpg" alt="">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f03.jpg" alt="">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f18.jpg" alt="">
+          </li>
+
+          <li>
+            <img src="public/image/home/small/18.jpg" alt="" data-toggle="modal" id="18" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f15.jpg" alt="">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f16.jpg" alt="">
+          </li>
+          <li>
+            <img src="public/image/home/small/19.jpg" alt="" data-toggle="modal" id="19" class="imgModal" data-target="#imgModal">
+          </li>
+          <li class="hidePhoto">
+            <img src="public/image/home/small/f17.jpg" alt="">
+          </li>
+
+          <li>
+            <img src="public/image/home/small/17.jpg" alt="" data-toggle="modal" id="17" class="imgModal" data-target="#imgModal">
+          </li>
 
 
-        </ul><!-- /.center-block -->
+
+        </ul><!-- /.image-thumbnail -->
       </div>
     </div><!-- content-wrapper -->
-  
 
-
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-labelledby="imgModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
           </div>
           <div class="modal-body">
-            <div class="slider-wrapper" id="slider1_container">
-              <div u="slides" class="slider-content">
-                <div><img u="image" src="public/image/home/big/00.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/01.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/02.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/03.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/04.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/05.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/06.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/07.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/08.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/09.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/10.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/11.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/12.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/13.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/14.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/15.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/16.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/17.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/18.jpg"/></div>
-                <div><img u="image" src="public/image/home/big/19.jpg"/></div>
-                <span u="arrowleft" class="jssora21l" style="left:8px;"></span>
-                <span u="arrowright" class="jssora21r" style="right:8px;"></span>
+            <div class="slider-wrapper" id="slider1_container" >
+              <div data-u="slides" class="slider-content">
+                <div><img data-u="image" src="public/image/home/big/00.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/01.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/02.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/03.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/04.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/05.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/06.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/07.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/08.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/09.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/10.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/11.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/12.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/13.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/14.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/15.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/16.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/17.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/18.jpg"/></div>
+                <div><img data-u="image" src="public/image/home/big/19.jpg"/></div>
+                <span data-u="arrowleft" class="jssora21l" style="left:8px;"></span>
+                <span data-u="arrowright" class="jssora21r" style="right:8px;"></span>
               </div><!-- /.slider-wrapper -->
-            </div><!-- /.slider-content --> 
+            </div><!-- /.slider-content -->
           </div><!-- /.modal-body -->
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->    
+    </div><!-- /.modal -->
   </section><!-- /#album -->
   <footer id="footer">
         <div class="row">
@@ -169,22 +221,49 @@
           </div>
           <div class="col-xs-7 col-sm-6">
             <div class="contact">
-              <a href=""><i class="icon fa fa-bookf"></i></a>
-              <a href=""><i class="icon fa fa-envelope-o"></i></a>
-              <a href=""><i class="icon fa fa-phone"></i></a>
+              <a href="https://www.facebook.com/Rahi.Makeup12" target="_blank" class="showIcon"><i class="icon fa fa-bookf"></i></a>
+              <a href="#" class="showIcon" data-toggle="modal" data-target="#emailModal"><i class="icon fa fa-envelope-o"></i></a>
+              <a href="" class="showIcon" data-toggle="modal" data-target="#phoneModal"><i class="icon fa fa-phone"></i></a>
               <a href="#footer" id="infoIcon" class="vert-line"><i class="icon fa fa-info"></i></a>
             </div>
           </div>
           <div class="hidden-xs col-sm-12">
-            <p class="footerText">Copyright © 2014 Rahiemakeup.com.au All Rights Reserved</p>
+            <p class="footerText showIcon">Copyright © 2014 Rahiemakeup.com.au All Rights Reserved</p>
           </div>
         </div>
-      </footer>
 
-    
+    <div class="modal fade footerModal" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="imgModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="footerModal"><span >rahiemakeup@gmail.com</span>
+            </div>
+          </div><!-- /.modal-body -->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /#footerModal -->
+    <div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-labelledby="imgModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="footerModal"><span >+61 403 019 737 <br> Rahie Fard</span>
+            </div>
+          </div><!-- /.modal-body -->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /#phoneModal -->
+  </footer>
 
-    
-  
+
+
+
+
   <section id="info" class="content-wrapper">
       <div class="content-wrapper">
       <div class="container">
@@ -199,217 +278,32 @@
             <div id="map-canvas" class="google-map"></div>
             <div class="contact">
               <div class="contact-item">
-                <a href=""><i class="icon fa fa-map-marker"></i>Melbourn, Australia</a>
-                <a href=""><i class="icon fa fa-envelope-o"></i>rahiemakeup@gmail.com</a>
+                <a href="#map-canvas"><i class="icon fa fa-map-marker"></i>Melbourn, Australia</a>
+                <a href="mailto:rahiemakeup@gmail.com"><i class="icon fa fa-envelope-o"></i>rahiemakeup@gmail.com</a>
               </div>
-              <div class="contact-item">           
-                <a href=""><i class="icon fa fa-phone"></i>+61 403 019 737</a>
-                <a href=""><i class="icon fa fa-bookf"></i>fb.com/</a>  
-              </div>        
+              <div class="contact-item">
+                <a href="tel:403019737"><i class="icon fa fa-phone"></i>+61 403 019 737</a>
+                <a href="https://www.facebook.com/Rahi.Makeup12" target="_blank"><i class="icon fa fa-bookf"></i>Rahi.Makeup12</a>
+              </div>
             </div>
-            
+
 
           </div>
         </div><!-- row -->
-        
+
       </div><!-- container -->
     </div><!-- content-wrapper -->
   </section><!-- info -->
   
 
 
-
-
-
   <script src="public/js/vendor/jquery.min.js"></script>
+  <script src="public/js/vendor/jquery-ui.min.js"></script>
   <script src="public/js/vendor/bootstrap.js"></script>
   <script src="public/js/vendor/jssor.slider.mini.js"></script>
-  <script type="text/javascript">
-    
-
-//         $(function() {
-
-//   $('a[href*=#]:not([href=#])').click(function() {
-//     // $("#info").toggle(1000);
-//     // $("#album").toggle(500);
-//     // $("#footer").css("position", "relative");
-//     //        $("footerText").css("position", "relative");
-//     $("#info").css("display", "block");
-//     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-//       var target = $(this.hash);
-//       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      
-//       if (target.length) {
-//         $('html,body').animate({
-//           scrollTop: $("#footer").offset.top
-//         }, 1000, function(){
-//           $("#album").css("display", "none");
-           
-//            $("#footer").css("position", "relative");
-//            $("footerText").css("position", "relative");
-//         } );
-//         return false;
-//       }
-//     }
-//   });
-// });
-"use strict";
-      $("#infoIcon").click(
-        function toggle() {
-          var winHeight=$( window ).height();
-          var footerHeight=$( "#footer" ).outerHeight();
-          if ( $("#info").css("display")=="none") {
-            $("#info").css("display","block");
-            $("#info").css("top",winHeight);
-            $('#info').animate({
-              top:footerHeight
-              }, 3000, function(){
-                $("#album").css("display","none");
-              });
-              $('#footer').animate({
-              bottom: winHeight - footerHeight,
-              }, 3000, function(){
-                $("#footer").css("background-color","rgba(47, 52,59,1)");
-                $("#footer").css("position","absolute");
-                console.log($( "#footer" ).outerHeight());
-                console.log($("#footer").css("bottom"));
-                console.log($( window ).height());
-              });
-              return false;
-          }
-          else {
-          $("#album").css("display","block");
-            // $("#info").css("top",winHeight);
-            $('#info').animate({
-              top:winHeight
-              }, 3000, function(){
-                $("#info").css("display","none");
-              });
-              $('#footer').animate({
-              bottom: 0,
-              }, 3000, function(){
-                $("#footer").css("background-color","rgba(47, 52,59,0.9)");
-                $("#footer").css("position","fixed");
-              });
-
-          }            
-        });
 
 
-      jQuery(document).ready(function ($) {
-
-        
-          //Define an array of slideshow transition code
-          // var _SlideshowTransitions = [
-          // {$Duration:1200,x:1,$Easing:{$Left:$JssorEasing$.$EaseInOutQuart,$Opacity:$JssorEasing$.$EaseLinear},$Opacity:2}
-
-              // {$Duration: 900, $Clip: 3, $Easing: $JssorEasing$.$EaseInOutCubic }
-              //CLIP|TB
-              // {$Duration: 900, $Clip: 12, $Easing: $JssorEasing$.$EaseInOutCubic },
-
-              //ZMF|10
-              // {$Duration: 600, $Zoom: 11, $Easing: { $Zoom: $JssorEasing$.$EaseInExpo, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 },
-          // ];
-          var options = {
-              $AutoPlay: true,
-              $AutoPlayInterval: 3000,
-              $SlideDuration: 1000,
-              // $SlideshowOptions: {
-              //         $Class: $JssorSlideshowRunner$,
-              //         $Transitions: _SlideshowTransitions,
-              //         $TransitionsOrder: 1,
-              //         $ShowLink: true
-              //     }
-              $ArrowNavigatorOptions: {                           //[Optional] Options to specify and enable arrow navigator or not
-                    $Class: $JssorArrowNavigator$,                  //[Requried] Class to create arrow navigator instance
-                    $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                    $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                    $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
-                }
-          };
-          var jssor_slider1 = new $JssorSlider$('slider1_container', options);
-          var currentId;
-            $('.imgModal').click(function() { 
-                currentId = $(this).attr('id');
-               jssor_slider1.$GoTo(currentId);
-                 return currentId;
-            }
-          );
- 
-          
-
-       
-      
-      });
-
-  </script>
-
-  <script type="text/javascript">
-
-  var photoSrc = $('.imgModal').map(function () {
-        return this.src;
-
-    }).toArray(),
-   photoId = $('.imgModal').map(function () {
-        return this.id;
-    }).toArray(),
-    photoIndex = photoSrc.length,
-    arrayme = $('ul').find(".imgModal");
-
-
-
-
-    
-
-      function shuffle() {
-        var currentIndex = photoIndex, temporaryidValue,temporarysrcValue, randomIndex ;
-  // While there remain elements to shuffle...
-        while (0 !== currentIndex) {
-          // Pick a remaining element...
-          randomIndex = Math.floor(Math.random() * currentIndex);
-          currentIndex -= 1;
-
-          // And swap it with the current element.
-          temporaryidValue = photoId[currentIndex];
-          photoId[currentIndex] = photoId[randomIndex];
-          photoId[randomIndex] = temporaryidValue;
-
-     
-          temporarysrcValue = photoSrc[currentIndex];
-          photoSrc[currentIndex] = photoSrc[randomIndex];
-          photoSrc[randomIndex] = temporarysrcValue;
-
-        }
-
-        return photoId,photoSrc;
-        };
-      
-
-setInterval(function() {
-// console.log(shuffle());
-shuffle();
-        for (var i = 0; i <= photoIndex; i++) {
-             $(arrayme[i]).attr( "src", photoSrc[i]);  
-             $(arrayme[i]).attr( "id", photoId[i]);  
-        };
-
-},5000)
-    
-
-// ------------------previous image----------------------
-//     $("#previous").click(function () {
-//         photoArray.splice(photoIndex - 1, 0, photoArray.splice(0, 1)[0]);
-//         for (var i = 0; i <= photoIndex; i++) {
-//              $(arrayme[i]).attr( "id", photoArray[i]);    
-//         };
-//     });
-// }
-
-// window.onload =  function () {
-//     beginAnimate();
-// };
-  </script>
-
+  <script src="public/js/rahiemakeup-min.js"></script>
   
 
 </body>

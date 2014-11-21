@@ -39,15 +39,33 @@
 			font-size: 18px;
 		}
 
-		.fa-info {
+		.fa-info , .fa-times {
 			margin-left: 10px;
 			margin-right: 0px;
 		}
+
 		.vert-line {
 			height: 35px;
 			border-left: 1px solid @contessa;
 		}
 	}
+  .modal-body {
+	width: 280px;
+	.footerModal {
+	  .size(290px;180px);
+	  background-color: @outerspace;
+	  color: @hampton;
+	  text-align: center;
+	  display: table-cell;
+	  vertical-align: middle;
+	  float: none;
+	  font-weight: bold;
+	  font-size: 14pt;
+
+	}
+
+  }
+
 	@media (min-width: @min-small) {
 		height: 150px;
 		padding: 15px 40px;
@@ -65,13 +83,22 @@
 			.fa-envelope-o {
 			font-size: 23px;
 			}
-			.fa-info {
+			.fa-info , .fa-times {
 				margin-left: 20px;
 				margin-right: 0px;
 			}
 			.vert-line {
 				height: 100px;			
 			}
+		}
+		.modal-body {
+		  width: 440px;
+		  .footerModal {
+			.size(440px;220px);
+			font-size: 18pt;
+
+		  }
+
 		}
 	}
 

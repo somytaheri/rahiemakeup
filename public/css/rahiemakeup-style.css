@@ -5089,9 +5089,9 @@ button.close {
   outline: 0;
 }
 .modal.fade .modal-dialog {
-  -webkit-transform: translate(0, -25%);
-  -ms-transform: translate(0, -25%);
-  transform: translate(0, -25%);
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
   -webkit-transition: -webkit-transform 0.3s ease-out;
   -moz-transition: -moz-transform 0.3s ease-out;
   -o-transition: -o-transform 0.3s ease-out;
@@ -5792,9 +5792,13 @@ a {
   text-decoration: none;
   color: inherit;
 }
+a:link,
+a:visited,
+a:active,
 a:hover {
   text-decoration: none;
   color: inherit;
+  outline: none;
 }
 #footer {
   height: 50px;
@@ -5836,13 +5840,29 @@ a:hover {
 #footer .contact .fa-envelope-o {
   font-size: 18px;
 }
-#footer .contact .fa-info {
+#footer .contact .fa-info,
+#footer .contact .fa-times {
   margin-left: 10px;
   margin-right: 0px;
 }
 #footer .contact .vert-line {
   height: 35px;
   border-left: 1px solid #c77966;
+}
+#footer .modal-body {
+  width: 280px;
+}
+#footer .modal-body .footerModal {
+  width: 290px;
+  height: 180px;
+  background-color: #2f343b;
+  color: #e3cda4;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+  font-weight: bold;
+  font-size: 14pt;
 }
 @media (min-width: 768px) {
   #footer {
@@ -5865,18 +5885,88 @@ a:hover {
   #footer .contact .fa-envelope-o {
     font-size: 23px;
   }
-  #footer .contact .fa-info {
+  #footer .contact .fa-info,
+  #footer .contact .fa-times {
     margin-left: 20px;
     margin-right: 0px;
   }
   #footer .contact .vert-line {
     height: 100px;
   }
+  #footer .modal-body {
+    width: 440px;
+  }
+  #footer .modal-body .footerModal {
+    width: 440px;
+    height: 220px;
+    font-size: 18pt;
+  }
 }
 @media (min-width: 1025px) {
   #footer img {
     width: 330px;
     height: 117px;
+  }
+}
+.modal-backdrop {
+  z-index: 0;
+}
+.modal-backdrop.in {
+  opacity: 0.8;
+}
+.modal-dialog {
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+.modal-dialog .modal-content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: inherit;
+  border: none;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-clip: padding-box;
+  outline: none;
+}
+.modal-dialog .modal-content .modal-header {
+  border-bottom: none;
+  padding: 0px;
+}
+.modal-dialog .modal-content .modal-header .close {
+  color: #c77966;
+  border-radius: 50%;
+  width: 29px;
+  height: 29px;
+  border: 1px solid #c77966;
+  line-height: inherit;
+  font-size: 20px;
+  opacity: 1;
+  text-shadow: none;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.modal-dialog .modal-content .modal-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 768px) {
+  .modal-dialog .modal-content .modal-header .close {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  .modal-dialog .modal-content .modal-body .slider-wrapper {
+    width: 550px;
+    height: 429px;
   }
 }
 /*@import "general/header";*/
@@ -5893,13 +5983,11 @@ a:hover {
   padding-left: 10px;
   padding-right: 10px;
 }
-#album .content-wrapper .container .center-block {
+#album .content-wrapper .container .image-thumbnail {
+  padding: 0;
   max-width: 880px;
   margin: 0 auto;
   text-align: center;
-}
-#album .content-wrapper .container .image-thumbnail {
-  padding: 0;
 }
 #album .content-wrapper .container .image-thumbnail li {
   list-style: none;
@@ -5912,67 +6000,22 @@ a:hover {
   width: 100px;
   height: 100px;
 }
-#album .modal-backdrop {
-  z-index: 0;
+#album .content-wrapper .container .image-thumbnail .hidePhoto {
+  display: none;
 }
-#album .modal-backdrop.in {
-  opacity: 0.8;
-}
-#album .modal-dialog {
-  height: 100%;
-  margin: 0 auto;
-  width: 100%;
-}
-#album .modal-dialog .modal-content {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  background-color: inherit;
-  border: none;
-  border-radius: 0px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  background-clip: padding-box;
-  outline: none;
-}
-#album .modal-dialog .modal-content .modal-header {
-  border-bottom: none;
-  padding: 0px;
-}
-#album .modal-dialog .modal-content .modal-header .close {
-  color: #c77966;
-  border-radius: 50%;
-  width: 29px;
-  height: 29px;
-  border: 1px solid #c77966;
-  line-height: inherit;
-  font-size: 20px;
-  opacity: 1;
-  text-shadow: none;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-#album .modal-dialog .modal-content .modal-body {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-#album .modal-dialog .modal-content .modal-body .slider-wrapper {
+#album .slider-wrapper {
   display: block;
-  overflow: hidden;
   width: 300px;
   height: 234px;
 }
-#album .modal-dialog .modal-content .modal-body #slider1_container {
+#album #slider1_container {
   position: relative;
   overflow: hidden;
   width: 300px;
   height: 234px;
 }
-#album .modal-dialog .modal-content .modal-body #slider1_container .slider-content {
+#album #slider1_container .slider-content {
+  overflow: hidden;
   width: 300px;
   height: 234px;
   background-color: #030000;
@@ -6020,22 +6063,18 @@ a:hover {
     width: 110px;
     height: 110px;
   }
-  #album .modal-dialog .modal-content .modal-header .close {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    margin-top: 10px;
-    margin-right: 10px;
+  #album .content-wrapper .container .image-thumbnail .hidePhoto {
+    display: inline-block;
   }
-  #album .modal-dialog .modal-content .modal-body .slider-wrapper {
+  #album .slider-wrapper {
     width: 550px;
     height: 429px;
   }
-  #album .modal-dialog .modal-content .modal-body #slider1_container {
+  #album #slider1_container {
     width: 550px;
     height: 429px;
   }
-  #album .modal-dialog .modal-content .modal-body #slider1_container .slider-content {
+  #album #slider1_container .slider-content {
     width: 550px;
     height: 429px;
   }
@@ -6043,7 +6082,7 @@ a:hover {
 #info {
   background-color: #e3cda4;
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
 }
