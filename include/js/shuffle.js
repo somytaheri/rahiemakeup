@@ -13,11 +13,10 @@ if (document.documentElement.clientWidth >768){
     function shuffle() {
         var currentIndex = photoIndex, temporaryidValue,temporarysrcValue, randomIndex ;
         // While there remain elements to shuffle...
-        while (0 !== currentIndex) {
+        for (var i = 0; i <= 1; i++)  {
             // Pick a remaining element...
             randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex -= 1;
-
             // And swap it with the current element.
             temporaryidValue = photoId[currentIndex];
             photoId[currentIndex] = photoId[randomIndex];

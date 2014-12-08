@@ -6067,16 +6067,16 @@ a:hover {
     display: inline-block;
   }
   #album .slider-wrapper {
-    width: 550px;
-    height: 429px;
+    width: 660px;
+    height: 515px;
   }
   #album #slider1_container {
-    width: 550px;
-    height: 429px;
+    width: 660px;
+    height: 515px;
   }
   #album #slider1_container .slider-content {
-    width: 550px;
-    height: 429px;
+    width: 660px;
+    height: 515px;
   }
 }
 #info {
@@ -6113,8 +6113,9 @@ a:hover {
 #info .content-wrapper .container .contact {
   margin-top: 5px;
 }
-#info .content-wrapper .container .contact .contact-item {
-  float: left;
+#info .content-wrapper .container .contact .col-xs-6 {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 #info .content-wrapper .container .contact a {
   display: block;
@@ -6164,6 +6165,7 @@ a:hover {
   }
   #info .content-wrapper .container .contact a {
     line-height: 40px;
+    font-size: 16pt;
   }
   #info .content-wrapper .container .contact a .icon {
     width: 40px;
