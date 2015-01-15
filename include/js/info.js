@@ -19,8 +19,6 @@ $("#infoIcon").click(
 				backgroundColor: 'rgba(47, 52,59,1)'
 			}, 2000, function()
 			{
-				console.log($("#info").css("top"));
-				console.log($("#footer").css("background-color"));
 				$("#footer").css("position","absolute");
 				$("#info").css("position","absolute");
 				$( ".fa-info" ).removeClass( "fa-info" ).addClass( "fa-times" );
@@ -35,19 +33,20 @@ $("#infoIcon").click(
 		else
 		{
 			$("#album").css("display","block");
+			$("#footer").css("position","fixed");
+			$("#info").css("position","fixed");
+			$('#footer').animate({
+				bottom: 0,
+				backgroundColor: 'rgba(47, 52,59,0.9)'
+			}, 2000, function(){
+				$( ".fa-times" ).removeClass( "fa-times" ).addClass( "fa-info" );
+			});
 			$('#info').animate({
 				top:winHeight
 			}, 2000, function(){
 				$("#info").css("display","none");
 			});
-			$('#footer').animate({
-				bottom: 0,
-				backgroundColor: 'rgba(47, 52,59,0.9)'
-			}, 2000, function(){
-				$("#footer").css("position","fixed");
-				$("#info").css("position","fixed");
-				$( ".fa-times" ).removeClass( "fa-times" ).addClass( "fa-info" );
-			});
+
 			$('.showIcon').animate({
 				opacity:"1"
 			}, 2000
